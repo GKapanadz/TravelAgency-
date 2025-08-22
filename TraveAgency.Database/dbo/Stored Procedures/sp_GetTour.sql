@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE sp_GetTour
+@TourID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT * FROM Tours 
+    WHERE TourID = @TourID AND IsActive = 1
+END
